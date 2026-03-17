@@ -8,6 +8,7 @@ import { AuthScreen } from './components/auth/AuthScreen';
 import { store } from './services/dataService';
 import { User, UserRole, OfferData } from './types';
 import OfferLetterPage from './components/OfferLetterPage';
+import ctLogo from './components/assets/CT_LOGO.png';
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);

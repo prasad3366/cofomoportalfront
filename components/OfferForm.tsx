@@ -3,6 +3,7 @@ import { OfferData, CandidateDetails, SalaryConfig } from '../types';
 import { Input, Select, Toggle } from './ui/FormElements';
 import { Card } from './ui/Common';
 import { User, Briefcase, DollarSign, Building } from 'lucide-react';
+import ctLogo from './assets/CT_LOGO.png';
 
 interface OfferFormProps {
   data: OfferData;
@@ -215,7 +216,11 @@ const OfferForm: React.FC<OfferFormProps> = ({ data, onChange }) => {
             <Toggle 
               label="Include Company Logo in PDF" 
               checked={data.includeLogo} 
-              onChange={(c) => onChange({ ...data, includeLogo: c })} 
+              onChange={(c) => onChange({ 
+                ...data, 
+                includeLogo: c,
+                companyLogo: c ? ctLogo : ''
+              })} 
             />
              <Toggle 
               label="Require Background Verification" 
